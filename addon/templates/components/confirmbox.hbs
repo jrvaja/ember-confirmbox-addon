@@ -1,0 +1,12 @@
+{{#if show}}
+  <div class="confirmation flex-y center">
+    <div><strong>{{title}}</strong></div>
+    <p>{{text}}</p>
+    <div>
+      <button type="button" class="btn {{confirmClass}}" {{action "confirm"}}>{{confirmText}}</button>
+      {{#if showCancelBtn}}
+        <button type="button" class="btn  {{cancelClass}}" {{action "cancel"}}>{{cancelText}}</button>
+      {{/if}}
+    </div>
+  </div>
+{{/if}}

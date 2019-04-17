@@ -1,3 +1,5 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<h2>Hey there</h2>
+<button {{action "setValue" 1 target=confirmbox}}>Open Model1</button>
+<button {{action "setValue" 2 target=confirmbox}}>Open Model2</button>
+<Confirmbox @title="Delete Task" @text="Are you sure?" @confirmButtonText="Confirm" @cancelButtonText="Opp"
+  @showCancelButton @onConfirm={{action "onConfirm"}} @onCancel={{action "closeConfirmbox"}} />

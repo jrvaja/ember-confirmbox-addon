@@ -1,0 +1,67 @@
+@import url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+.flex-x {
+  display: flex;
+  flex-direction: row;
+}
+.flex-x.center {
+  align-items: center;
+  justify-content: center;
+}
+.flex-y {
+  display: flex;
+  flex-direction: column;
+}
+.flex-y.center {
+  align-items: center;
+  justify-content: center;
+}
+.flex-0 {
+  flex: 0;
+}
+.flex-1 {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.full-height {
+  height: 100vh;
+}
+.full-height-64ex {
+  height: calc(100vh - 64px);
+}
+.fill-width {
+  width: 100%;
+}
+.scroll-x {
+  overflow-x: auto;
+}
+
+.confirm-box .confirmation {
+  background: #c3c3c3;
+  width: 240px;
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.confirmbox-full {
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+.confirmbox-full .confirmation{
+  background: #e3e3e3;
+  width: 320px;
+  border-radius: 6px;
+  padding: 20px 10px;
+}
+
+
