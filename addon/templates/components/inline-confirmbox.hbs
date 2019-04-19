@@ -1,0 +1,17 @@
+<div>
+  {{#if ask}}
+    <div class="confirmation">
+      <span>{{text}}</span>
+      <button type="button" class="btn btn-primary btn-sm {{confirmClass}}" {{action "confirmed" on="click"}}>
+        {{confirmText}}
+      </button>
+      <button type="button" class="btn btn-default btn-sm {{cancelClass}}" {{action "cancelled" on="click"}}>
+        {{cancelText}}
+      </button>
+    </div>
+  {{else}}
+    <div {{action 'toggle' on="click"}} class="cursor-pointer">
+      {{yield}}
+    </div>
+  {{/if}}
+</div>

@@ -1,0 +1,6 @@
+<h2>Posts</h2>
+<button {{action "setValue" "Post1" "postDelete" target=confirmbox}}>Open Model1</button> <br>
+<button {{action "setValue" "Post2" "postDelete" target=confirmbox}}>Open Model2</button> <br>
+<Confirmbox @activator="postDelete" @title="Delete Post" @text="Are you sure?" @confirmButtonText="Confirm"
+  @cancelButtonText="Cancel" @showCancelButton @onConfirm={{action "deletePost"}}
+  @onCancel={{action "closeConfirmbox"}} />

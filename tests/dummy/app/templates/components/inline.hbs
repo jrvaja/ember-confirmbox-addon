@@ -1,0 +1,12 @@
+{{!-- INLINE --}}
+Some Text <InlineConfirmbox @confirmButtonClass="btn-success" @onConfirm={{action "confirmHandler" 1}}
+  @onCancel={{action "cancelHandler"}}>
+  <button class="btn"><i class="fa fa-home"></i> Home</button>
+</InlineConfirmbox>
+{{!-- INLINE --}}
+<InlineConfirmbox @onConfirm={{action "confirmHandler" 2}} @onCancel={{action "cancelHandler"}}>
+  <button>Rock</button>
+</InlineConfirmbox>
+<InlineConfirmbox @onConfirm={{action "confirmHandler" 2}} @onCancel={{action "cancelHandler"}}>
+  <span>Click me</span>
+</InlineConfirmbox>

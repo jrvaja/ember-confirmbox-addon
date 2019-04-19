@@ -1,16 +1,10 @@
 import Component from '@ember/component';
-import layout from '../templates/components/confirmbox';
+import layout from '../templates/components/inline-confirmbox';
 import { computed } from "@ember/object";
-import { inject } from "@ember/service";
 
 export default Component.extend({
   layout,
-  classNames: ['flex-y', 'center'],
-  classNameBindings: ['show:confirmbox-full'],
-  confirmbox: inject(),
-  show: computed('confirmbox.selected', function () {
-    return this.confirmbox.selected !== null && this.confirmbox.selected !== "" && this.activator === this.confirmbox.activator;
-  }),
+  ask: false,
   confirmText: computed('confirmButtonText', function () {
     return this.confirmButtonText ? this.confirmButtonText : 'Okay'
   }),
@@ -27,11 +21,16 @@ export default Component.extend({
     return this.showCancelButton !== undefined ? true : false;
   }),
   actions: {
-    confirm() {
-      this.onConfirm();
+    toggle() {
+      this.toggleProperty('ask');
     },
-    cancel() {
+    confirmed(args) {
+      this.onConfirm(args);
+      this.toggleProperty('ask');
+    },
+    cancelled() {
       this.onCancel();
+      this.toggleProperty('ask');
     }
   }
 });

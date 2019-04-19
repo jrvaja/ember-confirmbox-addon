@@ -1,6 +1,6 @@
 {
   "name": "ember-confirmbox-addon",
-  "version": "0.0.4",
+  "version": "0.0.8",
   "description": "Simple Ember confirm box customization.",
   "keywords": [
     "ember-addon",

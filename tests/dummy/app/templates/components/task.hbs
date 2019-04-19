@@ -1,0 +1,6 @@
+<h2>Tasks</h2>
+<button {{action "setValue" "task 1" target=confirmbox}}>Open Model1</button>
+<button {{action "setValue" "task 2" target=confirmbox}}>Open Model2</button>
+{{!-- DIALOG BASESD --}}
+<Confirmbox @title="Delete Task" @text="Are you sure?" @confirmButtonText="Confirm" @cancelButtonText="Opp"
+  @showCancelButton @onConfirm={{action "deleteTask"}} @onCancel={{action "closeConfirmbox"}} />

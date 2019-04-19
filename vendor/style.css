@@ -1,5 +1,5 @@
 @import url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-
+@import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 .flex-x {
   display: flex;
   flex-direction: row;
@@ -52,9 +52,12 @@
   height: 100%;
   width: 100%;
   background: rgba(0,0,0,0.5);
-  position: absolute;
+  position: fixed;
   top: 0;
   left:0;
+  bottom:0;
+  right:0;
+  z-index: 9999;
 }
 
 .confirmbox-full .confirmation{
@@ -64,4 +67,6 @@
   padding: 20px 10px;
 }
 
-
+.cursor-pointer {
+  cursor: pointer;
+}

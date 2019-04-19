@@ -1,0 +1,1 @@
+export { default } from 'ember-confirmbox-addon/components/inline-confirmbox';
